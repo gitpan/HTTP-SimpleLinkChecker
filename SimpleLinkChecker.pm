@@ -1,4 +1,4 @@
-#$Id: SimpleLinkChecker.pm,v 1.7 2005/01/26 15:12:49 comdog Exp $
+#$Id: SimpleLinkChecker.pm,v 1.8 2005/03/12 05:23:57 comdog Exp $
 package HTTP::SimpleLinkChecker;
 use strict;
 
@@ -12,7 +12,7 @@ use LWP::UserAgent;
 my $UA = LWP::UserAgent->new();
 $UA->env_proxy;
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.7 $ =~ m/ (\d+) \. (\d+)/x;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.8 $ =~ m/ (\d+) \. (\d+)/x;
 
 sub check_link
 	{
@@ -128,7 +128,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2004 brian d foy.  All rights reserved.
+Copyright (c) 2004-2005 brian d foy.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
