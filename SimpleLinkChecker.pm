@@ -10,7 +10,7 @@ use LWP::UserAgent;
 
 $UA = LWP::UserAgent->new();
 
-$VERSION = 0.5;
+$VERSION = 0.51;
 
 sub check_link
 	{
@@ -86,6 +86,6 @@ request is made with the GET method.
 
 =head1 AUTHOR
 
-brian d foy <brian@smithrenaud.com>
+brian d foy <comdog@panix.com>
 
 =cut
