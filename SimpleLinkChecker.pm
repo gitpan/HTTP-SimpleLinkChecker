@@ -1,4 +1,4 @@
-#$Id: SimpleLinkChecker.pm,v 1.6 2004/09/08 02:20:42 comdog Exp $
+#$Id: SimpleLinkChecker.pm,v 1.7 2005/01/26 15:12:49 comdog Exp $
 package HTTP::SimpleLinkChecker;
 use strict;
 
@@ -10,8 +10,9 @@ use LWP::UserAgent;
 @EXPORT_OK = qw(check_link);
 
 my $UA = LWP::UserAgent->new();
+$UA->env_proxy;
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.6 $ =~ m/ (\d+) \. (\d+)/x;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.7 $ =~ m/ (\d+) \. (\d+)/x;
 
 sub check_link
 	{
@@ -87,6 +88,10 @@ set.
 The HEAD method is tried first, although if anything other than
 a good status code (those less than 400) is received, another
 request is made with the GET method.
+
+If you are behind a firewall or proxy, this module picks up those
+settings through LWP::UserAgent's env_proxy() method.  See
+L<LWP::UserAgent> for more details.
 
 =head2 Functions
 

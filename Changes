@@ -1,5 +1,10 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.06 - Tue Sep  7 21:25:39 2004
+* cleaned up distro
+* added tests and now use Test::More
+* no need to upgrade if you already have this module
+
 1.5 Sun Jun 23 11:27:43 CDT 2002
 	- the user-agent variable is now private, although you
 	can get at it with a method
