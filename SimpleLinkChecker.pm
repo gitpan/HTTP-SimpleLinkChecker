@@ -1,3 +1,4 @@
+#$Id: SimpleLinkChecker.pm,v 1.3 2002/01/23 11:11:52 comdog Exp $
 package HTTP::SimpleLinkChecker;
 use strict;
 
@@ -10,7 +11,7 @@ use LWP::UserAgent;
 
 $UA = LWP::UserAgent->new();
 
-$VERSION = 0.51;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.3 $ =~ m/ (\d+) \. (\d+)/x;
 
 sub check_link
 	{
@@ -86,6 +87,6 @@ request is made with the GET method.
 
 =head1 AUTHOR
 
-brian d foy <comdog@panix.com>
+brian d foy <bdfoy@cpan.org>
 
 =cut
