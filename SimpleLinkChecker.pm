@@ -1,4 +1,4 @@
-#$Id: SimpleLinkChecker.pm,v 1.3 2002/01/23 11:11:52 comdog Exp $
+#$Id: SimpleLinkChecker.pm,v 1.4 2002/01/25 08:50:43 comdog Exp $
 package HTTP::SimpleLinkChecker;
 use strict;
 
@@ -11,7 +11,7 @@ use LWP::UserAgent;
 
 $UA = LWP::UserAgent->new();
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.3 $ =~ m/ (\d+) \. (\d+)/x;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.4 $ =~ m/ (\d+) \. (\d+)/x;
 
 sub check_link
 	{
@@ -52,8 +52,6 @@ sub check_link
 	}
 
 1;
-
-# Below is the stub of documentation for your module. You better edit it!
 
 =head1 NAME
 
