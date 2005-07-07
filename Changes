@@ -1,5 +1,9 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.08 - Fri Mar 11 23:24:44 2005
+	* Added POD coverage tests, fixed issues
+	* no code changes: no need to upgrade
+
 1.07 - Wed Jan 26 09:14:43 2005
 * I now detect proxy settings with LWP::UserAgent's env_proxy().  This
 fixes CPAN RT #11069.

@@ -1,4 +1,4 @@
-#$Id: SimpleLinkChecker.pm,v 1.8 2005/03/12 05:23:57 comdog Exp $
+#$Id: SimpleLinkChecker.pm,v 1.9 2005/07/07 20:31:41 comdog Exp $
 package HTTP::SimpleLinkChecker;
 use strict;
 
@@ -12,7 +12,7 @@ use LWP::UserAgent;
 my $UA = LWP::UserAgent->new();
 $UA->env_proxy;
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.8 $ =~ m/ (\d+) \. (\d+)/x;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.9 $ =~ m/ (\d+) \. (\d+)/x;
 
 sub check_link
 	{
@@ -76,18 +76,25 @@ HTTP::SimpleLinkChecker - Check the HTTP response code for a link
 
 =head1 DESCRIPTION
 
-You don't have to know anything about objected-oriented
-Perl, LWP, or the HTTP module to be able to check your
-links. This module is designed for the casual user. It has
-one function, C<check_link>, that returns the HTTP response
-code that it receives when it tries to fetch the web address
-passed to it. The undef value is returned for any non-HTTP failure
-and the C<$HTTP::SimpleLinkChecker::ERROR> variable is
-set.
+You don't have to know anything about objected-oriented Perl, LWP, or
+the HTTP module to be able to check your links. This module is
+designed for the casual user. It has one function, C<check_link>, that
+returns the HTTP response code that it receives when it tries to fetch
+the web address passed to it. The undef value is returned for any
+non-HTTP failure and the C<$HTTP::SimpleLinkChecker::ERROR> variable
+is set.
 
-The HEAD method is tried first, although if anything other than
-a good status code (those less than 400) is received, another
-request is made with the GET method.
+The HEAD method is tried first, although if anything other than a good
+status code (those less than 400) is received, another request is made
+with the GET method. Note, however, that even with the best code, no
+module can control how servers decide to respond to a check, or
+control any of the myriad things that can go wrong with the network
+between you and the remote server. Some may filter requests based on
+origin IP address, user-agent type, or any other arbitrary factor.
+Some servers may not respond correctly at all. Furthermore, some
+servers might be temporarily down or overloaded. I recommend that you
+recheck "broken" links a couple times over a long period (like a day
+or two) before you decide they are really broken.
 
 If you are behind a firewall or proxy, this module picks up those
 settings through LWP::UserAgent's env_proxy() method.  See
@@ -99,14 +106,14 @@ L<LWP::UserAgent> for more details.
 
 =item check_link( URL )
 
-Return the HTTP response code for URL.
+Returns the HTTP response code for URL.
 
 =item user_agent
 
 Returns a reference to the LWP::UserAgent object.  You
 can affect it directly.  See L<LWP::UserAgent>.
 
-	my $ua = HTTP::SimpleLinkChecker::user_agent;
+	my $ua = HTTP::SimpleLinkChecker::user_agent();
 	$ua->from( 'joe@example.com' );
 	$ua->agent( 'Mozilla 19.2' );
 
