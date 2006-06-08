@@ -1,5 +1,12 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.10 - Thu Jun  8 07:54:27 2006
+	* Distro cleanup; no need up to upgrade
+
+1.09 - Thu Jul  7 15:32:25 2005
+* Updated docs to note the things that can go wrong when checking links.
+There is no need to upgrade
+
 1.08 - Fri Mar 11 23:24:44 2005
 	* Added POD coverage tests, fixed issues
 	* no code changes: no need to upgrade

@@ -4,9 +4,11 @@ MANIFEST
 META.yml
 README
 SimpleLinkChecker.pm
-t/load.t
-t/pod.t
-t/prereq.t
 t/200.t
 t/403.t
+t/load.t
+t/pod.t
+t/pod_coverage.t
+t/prereq.t
 t/test_manifest
+t/user_agent.t
