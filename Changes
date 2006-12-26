@@ -1,5 +1,9 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.11 - Mon Dec 25 18:20:44 2006
+	* Somehow I forgot to include Exporter, so the exports weren't working.
+	Now they are.
+
 1.10 - Thu Jun  8 07:54:27 2006
 	* Distro cleanup; no need up to upgrade
 
