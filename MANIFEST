@@ -1,4 +1,5 @@
 Changes
+LICENSE
 Makefile.PL
 MANIFEST
 META.yml
@@ -6,6 +7,7 @@ README
 SimpleLinkChecker.pm
 t/200.t
 t/403.t
+t/export.t
 t/load.t
 t/pod.t
 t/pod_coverage.t

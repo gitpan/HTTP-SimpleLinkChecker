@@ -7,6 +7,7 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
 	'NAME'         => 'HTTP::SimpleLinkChecker',
 	'VERSION_FROM' => 'SimpleLinkChecker.pm',
+	'LICENSE'       => 'perl',
 
 	'PREREQ_PM'    => { 
 		'HTTP::Request'  => '1.28',
