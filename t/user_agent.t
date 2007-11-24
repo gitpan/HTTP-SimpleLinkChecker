@@ -1,4 +1,4 @@
-#$Id: user_agent.t,v 1.1 2005/07/07 18:46:44 comdog Exp $
+#$Id: user_agent.t 1650 2005-07-07 18:46:44Z comdog $
 use Test::More tests => 5;
 
 use_ok( 'HTTP::SimpleLinkChecker' );

@@ -1,4 +1,4 @@
-# $Id: load.t,v 1.1 2004/09/08 02:20:42 comdog Exp $
+# $Id: load.t 1448 2004-09-08 02:20:42Z comdog $
 BEGIN { @classes = qw(HTTP::SimpleLinkChecker) }
 
 use Test::More tests => scalar @classes;

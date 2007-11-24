@@ -1,4 +1,4 @@
-#$Id: SimpleLinkChecker.pm,v 1.13 2007/01/10 04:22:38 comdog Exp $
+#$Id: SimpleLinkChecker.pm 2428 2007-11-24 11:07:35Z comdog $
 package HTTP::SimpleLinkChecker;
 use strict;
 
@@ -13,7 +13,7 @@ use LWP::UserAgent;
 my $UA = LWP::UserAgent->new();
 $UA->env_proxy;
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.13 $ =~ m/ (\d+) \. (\d+)/x;
+$VERSION = 1.14;
 
 sub check_link
 	{

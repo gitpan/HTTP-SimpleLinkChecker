@@ -1,4 +1,4 @@
-# $Id: test_manifest,v 1.4 2006/12/26 02:19:33 comdog Exp $
+# $Id: test_manifest 1963 2006-12-26 02:19:33Z comdog $
 load.t
 pod.t
 pod_coverage.t

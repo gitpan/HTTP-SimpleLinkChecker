@@ -1,5 +1,10 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.14 - Sat Nov 24 05:08:50 2007
+	* Cleanups for the move from CVS to SVN
+	* added teh httpstatus command line program to make it even
+	easier
+
 1.13 - Tue Jan  9 22:23:35 2007
 	* updated copyright and license info
 	* no code changes, so no need to upgrade

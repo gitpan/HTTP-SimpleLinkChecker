@@ -1,0 +1,59 @@
+#!/usr/bin/perl -s
+use vars qw( $c );
+
+use HTTP::SimpleLinkChecker;
+
+my $format = $c ? "%3d\n" : "%3d <= %s\n";
+
+foreach my $site ( @ARGV )
+	{
+	my $code = HTTP::SimpleLinkChecker::check_link( $site );
+	
+	printf $format, $code, $site;
+	}
+
+=head1 NAME
+
+httpstatus - Check the HTTP response code for a URL
+
+=head1 SYNOPSIS
+
+	httpstatus [-c] URL1 [URL2 ...]
+
+	prompt> httpstatus http://www.example.com
+	200 <= http://www.example.com
+	
+	prompt> httpstatus http://www.example.com http://www.cpan.org
+	200 <= http://www.example.com
+	200 <= http://www.cpan.org
+	
+	# the -c switch is for "concise" or "code"
+	# note the newline in case you use this in a pipeline!
+	prompt> httpstatus -c http://www.example.com
+	200
+	prompt>
+
+=head1 SOURCE AVAILABILITY
+
+This is part of the Perl module C<HTTP::SimpleLinkChecker>.
+
+This source is part of a SourceForge project which always has the
+latest sources in CVS, as well as all of the previous releases.
+
+	http://sourceforge.net/projects/brian-d-foy/
+
+If, for some reason, I disappear from the world, one of the other
+members of the project can shepherd this module appropriately.
+
+=head1 AUTHOR
+
+brian d foy, C<< <bdfoy@cpan.org> >>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2007 brian d foy. All rights reserved.
+
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut

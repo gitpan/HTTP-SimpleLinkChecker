@@ -1,9 +1,10 @@
 Changes
+examples/README
 LICENSE
 Makefile.PL
 MANIFEST
-META.yml
 README
+script/httpstatus
 SimpleLinkChecker.pm
 t/200.t
 t/403.t
@@ -14,3 +15,4 @@ t/pod_coverage.t
 t/prereq.t
 t/test_manifest
 t/user_agent.t
+META.yml                                 Module meta-data (added by MakeMaker)

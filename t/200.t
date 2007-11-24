@@ -1,4 +1,4 @@
-#$Id: 200.t,v 1.4 2004/09/08 02:20:42 comdog Exp $
+#$Id: 200.t 1448 2004-09-08 02:20:42Z comdog $
 use Test::More tests => 1;
 
 use HTTP::SimpleLinkChecker;
