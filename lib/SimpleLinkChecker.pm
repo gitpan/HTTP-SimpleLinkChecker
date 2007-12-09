@@ -1,6 +1,9 @@
-#$Id: SimpleLinkChecker.pm 2428 2007-11-24 11:07:35Z comdog $
+#$Id: SimpleLinkChecker.pm 2449 2007-12-09 01:57:38Z comdog $
 package HTTP::SimpleLinkChecker;
 use strict;
+
+use warnings;
+no warnings;
 
 use base qw(Exporter);
 use vars qw($ERROR $VERSION @EXPORT_OK);
@@ -13,7 +16,7 @@ use LWP::UserAgent;
 my $UA = LWP::UserAgent->new();
 $UA->env_proxy;
 
-$VERSION = 1.14;
+$VERSION = 1.15;
 
 sub check_link
 	{

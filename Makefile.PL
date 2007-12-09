@@ -9,24 +9,24 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
 	'NAME'         => 'HTTP::SimpleLinkChecker',
 	'ABSTRACT'     => 'Check the HTTP response code for a link',
-	'VERSION_FROM' => 'SimpleLinkChecker.pm',
+	'VERSION_FROM' => 'lib/SimpleLinkChecker.pm',
 	'LICENSE'      => 'perl',
 	'AUTHOR'       => 'brian d foy <bdfoy@cpan.org>',
 
-	'EXE_FILES'    => [ qw(script/httpstatus) ],
+	'PM'           => {
+		'lib/SimpleLinkChecker.pm' => '$(INST_LIBDIR)/SimpleLinkChecker.pm',
+		},
+
+	'EXE_FILES'    => [ qw(script/http_status) ],
 	
 	'PREREQ_PM'    => { 
 		'HTTP::Request'  => '1.28',
+		'HTTP::Status'   => '0',
 		'LWP::UserAgent' => '1.09',
 		},
 		
 	'MAN3PODS'     => {
-		'SimpleLinkChecker.pm' => '$(INST_MAN3DIR)/HTTP::SimpleLinkChecker.3',
-		},
-
-	'dist'         => {
-		'COMPRESS'        => 'gzip -9f',
-		'SUFFIX'          => 'gz',
+		'lib/SimpleLinkChecker.pm' => '$(INST_MAN3DIR)/HTTP::SimpleLinkChecker.3',
 		},
 
     clean  => { FILES    => q|HTTP-SimpleLinkChecker-*| },

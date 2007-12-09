@@ -1,5 +1,11 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.15 - Sat Dec  8 20:26:44 2007
+	* add the http_status command line program to check a URL (and the 
+	links it contains)
+	* require 5.006 now
+	* otherwise, things are the same as before :)
+
 1.14 - Sat Nov 24 05:08:50 2007
 	* Cleanups for the move from CVS to SVN
 	* added teh httpstatus command line program to make it even

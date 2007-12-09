@@ -1,12 +1,13 @@
 --- #YAML:1.0
 name:                HTTP-SimpleLinkChecker
-version:             1.14
+version:             1.15
 abstract:            Check the HTTP response code for a link
 license:             perl
 generated_by:        ExtUtils::MakeMaker version 6.36
 distribution_type:   module
 requires:     
     HTTP::Request:                 1.28
+    HTTP::Status:                  0
     LWP::UserAgent:                1.09
 meta-spec:
     url:     http://module-build.sourceforge.net/META-spec-v1.3.html
