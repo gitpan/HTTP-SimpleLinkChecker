@@ -1,11 +1,11 @@
 Changes
 examples/README
+lib/SimpleLinkChecker.pm
 LICENSE
 Makefile.PL
 MANIFEST
 README
 script/http_status
-lib/SimpleLinkChecker.pm
 t/200.t
 t/403.t
 t/export.t

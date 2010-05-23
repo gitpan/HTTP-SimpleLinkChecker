@@ -1,5 +1,9 @@
 Revision history for Perl extension HTTP::SimpleLinkChecker.
 
+1.16 - Sun May 23 13:21:12 2010
+	* Fix 403 status test (Google now returns 502)
+	* Moved everything to Github
+
 1.15 - Sat Dec  8 20:26:44 2007
 	* add the http_status command line program to check a URL (and the 
 	links it contains)

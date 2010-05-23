@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 require 5.006;
 
-eval "use Test::Manifest 1.14";
+eval "use Test::Manifest 1.21";
 
 WriteMakefile(
 	'NAME'         => 'HTTP::SimpleLinkChecker',
@@ -26,9 +26,20 @@ WriteMakefile(
 		},
 		
 	'MAN3PODS'     => {
-		'lib/SimpleLinkChecker.pm' => '$(INST_MAN3DIR)/HTTP::SimpleLinkChecker.3',
+		'lib/SimpleLinkChecker.pm' => '$(INST_MAN3DIR)/HTTP::SimpleLinkChecker.$(MAN3EXT)',
 		},
 
     clean  => { FILES    => q|HTTP-SimpleLinkChecker-*| },
+
+    (
+    ( $ExtUtils::MakeMaker::VERSION ge '6.46' )
+        ? (META_MERGE => {
+            resources => {
+                homepage    => 'http://github.com/briandfoy/http-simplelinkchecker',
+                repository  => 'git://github.com/briandfoy/http-simplelinkchecker.git',
+            }
+        })
+        : ()
+    )
 
 );
